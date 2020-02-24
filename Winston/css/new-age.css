@@ -317,12 +317,12 @@ footer {
 /******NEW CSS**********/
 
 h1, h2, h3, h4, h5, h6, .btn {
-  font-family: "Josefin Sans";
-  font-weight: 300;
+  font-family: "Shrikhand";
+  font-weight: 200;
 }
 
 body {
-  font-family: 'Josefin Slab';
+  font-family: "Comfortaa";
 }
 
 header.masthead{
@@ -335,9 +335,8 @@ header.masthead .header-content{
 }
 
 #header-title{
-  text-transform: uppercase;
+  font-family: "Shrikhand";
   letter-spacing: 2px;
-  font-weight: 200;
 }
 
 header.masthead {
@@ -384,5 +383,12 @@ header.masthead {
   }
   100% {
     background-position: 0% 50%
+  }
+}
+
+
+@media (max-width: 992px) {
+  #header-title {
+    font-size: 35px;
   }
 }
