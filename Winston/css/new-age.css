@@ -339,72 +339,91 @@ header.masthead .header-content{
   letter-spacing: 2px;
 }
 
-header.masthead {
-/*  height: 100vh;  */
-  min-height: calc(1 * 100vh);
-  background: linear-gradient(-60deg, #8536bb, #4970ff, #49ffcd);
-  background-size: 600% 600%;
-  -webkit-animation: Gradient 30s ease infinite;
-  -moz-animation: Gradient 30s ease infinite;
-  animation: Gradient 30s ease infinite;
+body{
+  animation: colorchange 30s infinite;
+  webkit-animation: colorchange 30s infinite; /* Chrome and Safari */
 }
 
 .clients {
     list-style: none;
     display: block;
     text-align: right;
-    width: 65%;
     margin: auto;
-    border-left: 1px solid #fdcc52;
-    border-top: 1px solid #fdcc52;
     padding-top: 0.5em;
     padding-inline-start: inherit;
     padding-right: 0.5em;
-}
-.clients-title {
-    width: 65%;
-    margin: auto;
-    text-align: left;
     padding-left: 0.5em;
 }
+.left {
+	text-align: left;
+}
+.clients-title {
+    margin: auto;
+    padding-bottom: 1em;
+    width: 400px;
+}
 
+.some-page-wrapper {
+  margin-top: 15px;
+}
 
-@-webkit-keyframes Gradient {
-  0% {
-    background-position: 0% 50%
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1
   }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
+
+  .double-column {
+    flex: 2
   }
 }
 
-@-moz-keyframes Gradient {
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
+.clients-title {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  transition: 1s;
 }
 
-@keyframes Gradient {
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
+
+
+
+
+
+
+
+
+
+@keyframes colorchange
+{
+  0%   {background: #5836bb;}
+  25%  {background: #4970ff}
+  50%  {background: #dc3545;}
+  75%  {background: #4970ff}
+  100%   {background: #5836bb;}
 }
 
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: #5836bb;}
+  25%  {background: #4970ff}
+  50%  {background: #dc3545;}
+  75%  {background: #4970ff}
+  100%   {background: #5836bb;}
+}
 
 @media (max-width: 992px) {
   #header-title {
@@ -413,7 +432,9 @@ header.masthead {
   header.masthead .header-content{
     min-width: 80vw;
   }
-  .clients, .clients-title{
+  .clients, .clients-title .left {
     min-width: 80vw;
+    text-align: center;
+    padding-top: 0;
   }
 }
