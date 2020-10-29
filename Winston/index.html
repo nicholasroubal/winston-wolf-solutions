@@ -60,7 +60,7 @@
                         <li><a href="https://samuelamoia.com">Samuel Amoia</a></li>
                         <li><a href="https://madebyminga.com">Made by Minga</a></li>
                         <li><a href="https://theaurum.com">The Aurum | In Progress</a></li>
-                        <li><a href="https://winstonwolfsolutions.com/img/HOM.webm">HOM | RIP 🍵😢</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#HOMVideo">House of Matcha | RIP</a></li>
                         <li><a href="https://www.guardianlife.com/">Guardian Life</a></li>
                       </ul>
                     </div>
@@ -78,6 +78,29 @@
       </div>
     </header>
 
+    <!-- HOM Modal -->
+    <div class="modal fade" id="HOMVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">House of Matcha 🍵</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <video id="HOM" width="100%" height="auto" controls preload="auto">
+              <source src="https://winstonwolfsolutions.com/img/HOM.webm" type="video/webm">
+            Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -87,6 +110,11 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/new-age.js"></script>
+    <script>
+      $('#HOMVideo').on('shown.bs.modal', function (e) {
+        document.getElementById('HOM').play();
+      })
+    </script>
 
   </body>
 
