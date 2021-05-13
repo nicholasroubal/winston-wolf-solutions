@@ -398,6 +398,9 @@ body{
   text-decoration: none;
   transition: 1s;
 }
+.clients li {
+    color: #fdcc52;
+}
 
 
 
