@@ -354,9 +354,6 @@ body{
     padding-right: 0.5em;
     padding-left: 0.5em;
 }
-.clients li {
-    padding: 0.2em;
-}
 .left {
 	text-align: left;
 }
@@ -403,6 +400,7 @@ body{
 }
 .clients li {
     color: #fdcc52;
+    padding: 0.2em;
 }
 
 
